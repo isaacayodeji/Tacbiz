@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: "Manrope", sans-serif;
+  
+}
+.animateText {
+  font-family: monospace;
+  overflow: hidden;
+  animation: typing 2s, cursor 0.4s step-end infinite alternate;
+}
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes typing {
+  from {
+    width: fit-content;
+  }
+}
+@font-face {
+  font-family: "gelionRegular";
+  src: url("../fonts/fonts/Gelion-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gelionBold";
+  src: url("../fonts/fonts/Gelion-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gelionLight";
+  src: url("../fonts/fonts/Gelion-Light.ttf") format("truetype");
+  font-style: normal;
+}
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+}
+
+.circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(120, 204, 252, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-1750px);
+  }
+}
+
+@keyframes scroll2 {
+  0% {
+    transform: translateX(-1750px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+/* icons */
+.icon::after{
+  position: absolute;
+  z-index: -1;
+  content: "";
+ inset: -3px;
+ border-radius:inherit ;
+background: conic-gradient(red, transparent var(--fill));
+transition: --fill 0.6s ease-out;
+  
+}
+@property --fill {
+  syntax: '<percentage>';
+  inherits: true;
+  initial-value: 0%;
+
+}
+.icons:hover{
+  color: red;
+  --fill:100%;
+}
+
+/* aboutus */
+@media (max-width: 700px) {
+  .aboutus {
+    background-image: none;
+  }
+}
+@media (min-width: 701px) {
+  .aboutus {
+    background-image: url("../src/images/man-pointing-tablet.jpg");
+  }
+}
