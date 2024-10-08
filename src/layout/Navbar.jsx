@@ -15,6 +15,9 @@ import saveAs from "file-saver";
 import { useTheme } from "../components/ThemeProviderComponent";
 
 const Navbar = () => {
+  const { hide, setHide } = useState(false);
+    const size = window.screen.width
+    console.log(size);
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
@@ -52,6 +55,8 @@ const Navbar = () => {
   const handleClick = () => {
     setClick(!click);
   };
+
+
 
   const content = (
     <>
@@ -156,7 +161,11 @@ const Navbar = () => {
               themeMode === "dark" ? " text-white" : "text-[#666666]"
             }  max-md:hidden`}
           >
-            <li className={`${themeMode === "dark" ? "hover:text-sky-200" : "hover:text-black"}  hover:translate-y-1 `}>
+            <li
+              className={`${
+                themeMode === "dark" ? "hover:text-sky-200" : "hover:text-black"
+              }  hover:translate-y-1 `}
+            >
               <a
                 onClick={() => {
                   scrollTo("home");
@@ -166,7 +175,11 @@ const Navbar = () => {
                 Home
               </a>
             </li>
-            <li className={`${themeMode === "dark" ? "hover:text-sky-200" : "hover:text-black"}  hover:translate-y-1 `}>
+            <li
+              className={`${
+                themeMode === "dark" ? "hover:text-sky-200" : "hover:text-black"
+              }  hover:translate-y-1 `}
+            >
               <a
                 onClick={() => {
                   scrollTo("about");
@@ -176,7 +189,11 @@ const Navbar = () => {
                 About
               </a>
             </li>
-            <li className={`${themeMode === "dark" ? "hover:text-sky-200" : "hover:text-black"}  hover:translate-y-1 `}>
+            <li
+              className={`${
+                themeMode === "dark" ? "hover:text-sky-200" : "hover:text-black"
+              }  hover:translate-y-1 `}
+            >
               <a
                 onClick={() => {
                   scrollTo("tech");
@@ -186,17 +203,25 @@ const Navbar = () => {
                 Services
               </a>
             </li>
-            <li className={`${themeMode === "dark" ? "hover:text-sky-200" : "hover:text-black"}  hover:translate-y-1 `}>
+            <li
+              className={`${
+                themeMode === "dark" ? "hover:text-sky-200" : "hover:text-black"
+              }  hover:translate-y-1 `}
+            >
               <a
                 onClick={() => {
                   scrollTo("project");
                 }}
                 href="/#project"
               >
-                product
+                Product
               </a>
             </li>
-            <li className={`${themeMode === "dark" ? "hover:text-sky-200" : "hover:text-black"}  hover:translate-y-1 `}>
+            <li
+              className={`${
+                themeMode === "dark" ? "hover:text-sky-200" : "hover:text-black"
+              }  hover:translate-y-1 `}
+            >
               <a
                 onClick={() => {
                   scrollTo("contact");

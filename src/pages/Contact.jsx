@@ -74,7 +74,7 @@ const Contact = () => {
         id="contact"
         className="p-5 py-10 lg:p-20 max-w-[1860px] mx-auto"
       >
-      <AnimationBoxes />
+        <AnimationBoxes />
         <div className="space-y-8 ">
           <div
             data-aos="zoom-in"
@@ -127,7 +127,7 @@ const Contact = () => {
                     label={
                       <div
                         className={`${
-                          themeMode === "dark" ? "text-white" : "text-black"
+                          themeMode === "dark" ? "text-sky-500" : "text-black"
                         }`}
                       >
                         {" "}

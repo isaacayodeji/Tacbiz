@@ -68,7 +68,7 @@ const Product = () => {
   const { themeMode } = useTheme();
   return (
     <>
-      <section id="project" className="lg:p-20  max-w-[1860px] mx-auto">
+      <section id="project" className="lg:p-20 w-full  max-w-[1860px] mx-auto">
       <AnimationBoxes />
         <div className="lg:px-10 flex flex-col space-y-10">
           {/* Heading */}
@@ -90,13 +90,15 @@ const Product = () => {
             </p>
           </div>
           {/* CARD CONTAINER */}
+          <div>
+
           <div className="flex flex-col md:flex-row mt-[100px] ml-7 mr-7 justify-between gap-[50px] aos-animinate">
             <div
               data-aos="zoom-in"
               data-aos-duration="3000"
               className="flex flex-col gap-3 justify-center w-[100%] md:w-[50%]"
             >
-              <h1 className="text-[2rem] md:text-[2.5rem] font-extrabold text-sky-500">
+              <h1 className="text-[2rem] md:text-[2.2rem] font-extrabold text-sky-500">
                 <p>Reckip accounting software</p>
               </h1>
               {/* <p className="text-[1rem] md:text-[1.2rem] w-[100%] flex">
@@ -200,6 +202,7 @@ const Product = () => {
                  Join us for fast, secure collections.
              </p> */}
             </div>
+          </div>
           </div>
         </div>
       </section>

@@ -2,13 +2,15 @@
 import AnimationBoxes from "../features/AnimationBox";
 import IntoImage from "../images/choosing-right-strategy.jpg";
 
+
+
 const Intro = () => {
   return (
-    <>
-      {/* WEB VIEW */}
-      <section id="home" className="px-20 max-w-[1860px] mx-auto pb-10">
+    <section >
+     
+      <div id="home" className="px-20 max-w-[1860px] mx-auto pb-10 w-[100%]">
       <AnimationBoxes />
-        <div className="grid lg:grid-cols-2 grid-cols-1 items-center justify-items-center lg:w-[100%] gap-6 pt-20">
+        <div className="grid lg:grid-cols-2 grid-cols-1 items-center justify-items-center lg:w-[100%] gap-6 pt-20 max-sm:-mx-20">
           <div className="space-y-4">
             <h2 className="lg:text-5xl text-3xl font-bold flex-wrap xl:w-[70%] pb-8">
               Your Strategic Partner for Financial Solution{" "}
@@ -28,8 +30,8 @@ const Intro = () => {
             <img className="rounded-2xl " src={IntoImage} alt="" />
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 export default Intro;

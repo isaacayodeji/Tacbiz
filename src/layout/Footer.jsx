@@ -6,17 +6,17 @@ import { animateScroll as scroll, scroller } from "react-scroll";
 import { useTheme } from "../components/ThemeProviderComponent";
 
 const Footer = () => {
-   const scrollToTop = () => {
-     scroll.scrollToTop();
-   };
-   const scrollTo = (element) => {
-     scroller.scrollTo(element, {
-       duration: 800,
-       delay: 0,
-       smooth: "easeInOutQuart",
-     });
-   };
-     const { themeMode } = useTheme();
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+  const scrollTo = (element) => {
+    scroller.scrollTo(element, {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+  };
+  const { themeMode } = useTheme();
   return (
     <footer className="px-6">
       <div className="flex border-b-2 justify-between p-6">
@@ -65,9 +65,7 @@ const Footer = () => {
                   scrollTo("home");
                 }}
                 href="/#home"
-              >
-              
-              </a>
+              ></a>
               Home
             </li>
             <li className="cursor-pointer">
@@ -113,8 +111,14 @@ const Footer = () => {
           </ul>
           <h2>
             Designed and built by{" "}
-            <span className="text-sky-500">Isaac Ayodeji</span> with Love &
-            Coffee
+            <a
+              href="https://www.instagram.com/zeekq_?igsh=cXg1bHF5ZGd0ZG5m"
+              target="_blank"
+              className="text-sky-500"
+            >
+              Isaac Ayodeji
+            </a>{" "}
+            with Love & Coffee
           </h2>
         </div>
       </div>
